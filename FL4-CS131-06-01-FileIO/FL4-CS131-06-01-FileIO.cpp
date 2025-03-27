@@ -27,6 +27,22 @@ int main() {
 		}
 	}
 	outFile.close();
+
+	ifstream inFile;
+	// Open an input file
+	inFile.open("c:\\Users\\thesp\\Desktop\\Test.txt");
+	// exit with error if open fails
+	if (inFile.fail()) {
+		cout << "File open failed.\n";
+		system("pause");
+		exit(1);
+	}
+	cout << "Using a while loop to read the whole file:\n";
+	while (inFile >> s1) {
+		//cout << s1;
+		//cout << s1 << " ";
+		cout << s1 << endl;
+	}
 	system("pause");
 	return 0;
 }
